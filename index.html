@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundación Rolando A. Zanetta — La Plata</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --blanco: #faf9f7;
+  --negro: #111110;
+  --rojo: #9b1c1c;
+  --gris: #555550;
+  --linea: rgba(17,17,16,0.1);
+  --max: 960px;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--blanco);
+  color: var(--negro);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 99;
+  background: rgba(250,249,247,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--linea);
+  height: 60px; display: flex; align-items: center; padding: 0 5vw;
+}
+.nav-inner {
+  max-width: var(--max); width: 100%; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-marca {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500; font-size: 1.05rem; letter-spacing: 0.04em;
+  color: var(--negro); text-decoration: none;
+}
+.nav-links { list-style: none; display: flex; gap: 2.5rem; }
+.nav-links a {
+  font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gris); text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--negro); }
+
+/* HERO */
+.hero {
+  padding-top: 60px; min-height: 100vh;
+  display: flex; align-items: center;
+  border-bottom: 1px solid var(--linea);
+}
+.hero-inner {
+  max-width: var(--max); width: 100%; margin: 0 auto;
+  padding: 8rem 5vw 7rem;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: end;
+}
+.hero-eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--rojo); margin-bottom: 2.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-eyebrow::before {
+  content: ''; display: block; width: 28px; height: 1px; background: var(--rojo);
+}
+.hero-h1 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(3.2rem, 5.5vw, 5rem); line-height: 1.08;
+  letter-spacing: -0.01em; color: var(--negro);
+}
+.hero-h1 em { font-style: italic; color: var(--rojo); }
+.hero-divider { width: 40px; height: 1px; background: var(--linea); margin: 3rem 0; }
+.hero-sub {
+  font-size: 0.92rem; line-height: 1.95; color: var(--gris); max-width: 360px;
+}
+.hero-btns { margin-top: 3.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.btn-solid {
+  font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--blanco); background: var(--negro); text-decoration: none;
+  padding: 0.8rem 1.8rem; transition: background 0.2s; display: inline-block;
+}
+.btn-solid:hover { background: var(--rojo); }
+.btn-text {
+  font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--negro); text-decoration: none; padding: 0.8rem 0;
+  border-bottom: 1px solid var(--negro); transition: color 0.2s, border-color 0.2s;
+  display: inline-block;
+}
+.btn-text:hover { color: var(--rojo); border-color: var(--rojo); }
+
+.hero-cita {
+  border-left: 1px solid var(--rojo); padding-left: 2rem; margin-bottom: 3.5rem;
+}
+.hero-cita blockquote {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300;
+  font-size: clamp(1.3rem, 2vw, 1.6rem); line-height: 1.55; color: var(--negro); margin-bottom: 1rem;
+}
+.hero-cita cite {
+  font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gris); font-style: normal;
+}
+.hero-meta { display: flex; flex-direction: column; gap: 0.6rem; }
+.hero-meta-item {
+  display: flex; align-items: center; gap: 0.8rem;
+  font-size: 0.78rem; color: var(--gris);
+}
+.hero-meta-item svg { color: var(--rojo); flex-shrink: 0; }
+
+/* WRAPPER + SECTIONS */
+.wrapper { max-width: var(--max); margin: 0 auto; padding: 0 5vw; }
+.section { border-bottom: 1px solid var(--linea); padding: 7rem 0; }
+.section-header {
+  display: grid; grid-template-columns: 200px 1fr;
+  gap: 4rem; margin-bottom: 5rem; align-items: start;
+}
+.section-eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--rojo); display: flex; align-items: center; gap: 1rem; padding-top: 0.4rem;
+}
+.section-eyebrow::before {
+  content: ''; display: block; width: 20px; height: 1px; background: var(--rojo);
+}
+.section-h2 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(2.2rem, 3.5vw, 3rem); line-height: 1.15; color: var(--negro);
+}
+.section-h2 em { font-style: italic; }
+
+/* HISTORIA */
+.historia-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.historia-cols p { font-size: 0.92rem; line-height: 1.95; color: var(--gris); }
+.historia-cols p + p { margin-top: 1.5rem; }
+.historia-cols p strong { color: var(--negro); font-weight: 500; }
+.monumento {
+  margin-top: 2.5rem; padding: 1.4rem 0;
+  border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea);
+  display: flex; align-items: center; gap: 1rem;
+}
+.dot { width: 5px; height: 5px; background: var(--rojo); border-radius: 50%; flex-shrink: 0; }
+.monumento span {
+  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris);
+  line-height: 1.6;
+}
+
+/* MISIÓN */
+.pilares {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border-top: 1px solid var(--linea); border-left: 1px solid var(--linea);
+}
+.pilar {
+  padding: 2.5rem; border-right: 1px solid var(--linea); border-bottom: 1px solid var(--linea);
+  transition: background 0.3s;
+}
+.pilar:hover { background: rgba(155,28,28,0.025); }
+.pilar-n {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;
+  font-weight: 300; color: rgba(155,28,28,0.3); line-height: 1; margin-bottom: 1.5rem;
+}
+.pilar h3 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 500;
+  font-size: 1.15rem; color: var(--negro); margin-bottom: 0.7rem;
+}
+.pilar p { font-size: 0.87rem; line-height: 1.85; color: var(--gris); }
+
+/* EVENTOS */
+.eventos { border-top: 1px solid var(--linea); }
+.evento {
+  display: grid; grid-template-columns: 120px 1fr 160px;
+  gap: 2rem; align-items: center; padding: 2rem 0;
+  border-bottom: 1px solid var(--linea);
+  transition: padding-left 0.35s;
+}
+.evento:hover { padding-left: 0.6rem; }
+.ev-fecha { display: flex; flex-direction: column; gap: 0.15rem; }
+.ev-dia { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; line-height: 1; }
+.ev-mes { font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gris); }
+.ev-info h3 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 500;
+  font-size: 1.2rem; color: var(--negro); margin-bottom: 0.35rem;
+}
+.ev-info p { font-size: 0.84rem; color: var(--gris); line-height: 1.65; }
+.ev-lugar {
+  font-size: 0.67rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--rojo); text-align: right;
+}
+
+/* CONTACTO */
+.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
+.contacto-info h3 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: 1.55rem; line-height: 1.45; color: var(--negro); margin-bottom: 2rem;
+}
+.c-datos { display: flex; flex-direction: column; gap: 1rem; }
+.c-dato {
+  display: flex; align-items: flex-start; gap: 0.9rem;
+  font-size: 0.84rem; color: var(--gris); line-height: 1.6;
+}
+.c-dato svg { color: var(--rojo); margin-top: 2px; flex-shrink: 0; }
+
+.form { display: flex; flex-direction: column; gap: 1.4rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+.campo { display: flex; flex-direction: column; gap: 0.45rem; }
+.campo label { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gris); }
+.campo input, .campo textarea, .campo select {
+  border: none; border-bottom: 1px solid var(--linea);
+  background: transparent; color: var(--negro);
+  font-family: 'Jost', sans-serif; font-weight: 300; font-size: 0.88rem;
+  padding: 0.6rem 0; outline: none; transition: border-color 0.2s; width: 100%; resize: none;
+}
+.campo input:focus, .campo textarea:focus, .campo select:focus { border-color: var(--rojo); }
+.campo input::placeholder, .campo textarea::placeholder { color: rgba(17,17,16,0.25); }
+.campo select option { background: var(--blanco); }
+.form-submit {
+  align-self: flex-start; font-family: 'Jost', sans-serif; font-weight: 400;
+  font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--blanco); background: var(--negro); border: none;
+  padding: 0.85rem 2rem; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem;
+}
+.form-submit:hover { background: var(--rojo); }
+
+/* FOOTER */
+footer { padding: 2.5rem 5vw; border-top: 1px solid var(--linea); }
+.footer-inner {
+  max-width: var(--max); margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+}
+.f-marca { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 0.95rem; color: var(--negro); }
+.f-copy { font-size: 0.7rem; color: var(--gris); }
+.f-ley { font-size: 0.67rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rojo); }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.reveal.on { opacity: 1; transform: none; }
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 4rem; }
+  .section-header { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 3rem; }
+  .historia-cols, .pilares, .contacto-grid { grid-template-columns: 1fr; }
+  .evento { grid-template-columns: 80px 1fr; }
+  .ev-lugar { display: none; }
+  .form-row { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-marca">Fundación Rolando A. Zanetta</a>
+    <ul class="nav-links">
+      <li><a href="#historia">Historia</a></li>
+      <li><a href="#gemelos">Legado</a></li>
+      <li><a href="#mision">Misión</a></li>
+      <li><a href="#actividades">Actividades</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="reveal">
+      <div class="hero-eyebrow">La Plata — Desde 1956</div>
+      <h1 class="hero-h1">Fundación<br>Rolando A.<br><em>Zanetta</em></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub">Organización dedicada a la preservación de la memoria histórica y la difusión del legado de la Resistencia Peronista en la ciudad de La Plata.</p>
+      <div class="hero-btns">
+        <a href="#historia" class="btn-solid">Conocer la historia</a>
+        <a href="#actividades" class="btn-text">Ver actividades</a>
+      </div>
+    </div>
+    <div class="reveal" style="transition-delay:.15s">
+      <div class="hero-cita">
+        <blockquote>"Que la oligarquía me fusile,<br>es un premio para mí"</blockquote>
+        <cite>Rolando A. Zanetta — Junio de 1956</cite>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Calle 68 Nº 1.541, La Plata, Buenos Aires
+        </div>
+        <div class="hero-meta-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Monumento Histórico Provincial — Ley 13.650
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section class="section" id="historia">
+  <div class="wrapper">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Historia</div>
+      <h2 class="section-h2">Una vida entregada<br><em>al pueblo</em></h2>
+    </div>
+    <div class="historia-cols">
+      <div class="reveal">
+        <p><strong>Rolando A. Zanetta</strong> fue una figura central de la Resistencia Peronista en La Plata. Tras el golpe de Estado de septiembre de 1955, asumió la conducción civil del movimiento con valentía, organizando la resistencia popular frente a la dictadura de la Revolución Libertadora.</p>
+        <p>En junio de 1956, fue detenido y trasladado al Policlínico San Martín, donde las fuerzas represivas intentaron quebrar su voluntad. Zanetta falleció pocas horas después, sin revelar ningún nombre, asumiendo solo toda la responsabilidad del movimiento.</p>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <p>Su figura representa el compromiso irrenunciable con los valores de justicia social y dignidad popular que caracterizaron a toda una generación. La memoria de su sacrificio es parte constitutiva de la identidad histórica y cultural de La Plata.</p>
+        <p>En reconocimiento a su legado, la casa sede de la fundación fue declarada <strong>Monumento Histórico Provincial</strong> por la Ley 13.650, constituyéndose en lugar de memoria para la comunidad platense.</p>
+        <div class="monumento">
+          <div class="dot"></div>
+          <span>Ley Provincial 13.650 — Monumento Histórico Provincial<br>Calle 68 Nº 1.541, La Plata</span>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:4rem;">
+      <img src="fotos/foto1.jpg" alt="Entrega de premios — Fundación Rolando A. Zanetta" style="width:100%;max-height:500px;object-fit:cover;object-position:center;filter:grayscale(100%);display:block;">
+    </div>
+  </div>
+</section>
+
+<!-- FRANJA CITA -->
+<div style="background:#9b1c1c;padding:6rem 5vw;text-align:center;">
+  <blockquote style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.45;color:#fff;margin:0 auto;max-width:760px;">"Que la oligarquía me fusile, es un premio para mí"</blockquote>
+  <cite style="display:block;margin-top:1.8rem;font-family:'Jost',sans-serif;font-style:normal;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.65);">— Rolando A. Zanetta, Junio de 1956</cite>
+</div>
+
+<!-- LOS GEMELOS -->
+<section class="section" id="gemelos">
+  <div class="wrapper">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Legado</div>
+      <h2 class="section-h2">Los gemelos<br><em>de su camisa</em></h2>
+      <cite style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--rojo);font-style:normal;display:block;margin-top:1.2rem;">Por Graciela Zanetta</cite>
+    </div>
+    <div class="historia-cols">
+      <div class="reveal">
+        <p>Las tardes de la infancia transcurrían serenas. La felicidad era el común denominador hasta aquel 16 de junio del 55.</p>
+        <p>Nuestro padre regresó a casa descompuesto. Su rostro desencajado hizo que mi madre dejara nuestras tareas y se dedicara a atenderlo de inmediato. Regresaba de Buenos Aires. Al salir del subte hacia sus oficinas, había visto el horror de la muerte en Plaza de Mayo. Las bombas habían despedazado a un pueblo. Tomó en ese momento conciencia de lo que es un pueblo bajo la opresión y la tiranía militar.</p>
+        <p>Fue entonces en esa masacre donde dejó parte de su vida. Lo que de ella quedaba, la dejaría en la lucha contra la tiranía y la opresión. Era un gobierno elegido por el mandato del pueblo, no se justificaba semejante barbarie. Ya nada fue igual. Nos veíamos de tanto en tanto. El ejército caía a cualquier hora a requisar nuestra casa. Nada era seguro.</p>
+        <p>La templanza y entrega de nuestra digna madre permitía mantener el equilibrio de mi hogar. Aún hoy recuerdo el sonido de los camiones al llegar y el desplazamiento de la tropa en la noche. Mi madre abría la puerta con toda serenidad y nos hacía un gesto para que guardásemos silencio; con su mirada nos transmitía paz. Pero el sudor frío de la navaja nos recorría el cuerpo. Sabíamos que nuestro padre estaba en peligro. Y nuestras plegarias eran cada noche para él.</p>
+        <p>Diciembre del '55 llegó con su perfume de tilos y la cárcel para mi padre. Y tantos compañeros. Allí pasamos Elsita Abadie y yo Navidad y Año Nuevo. Cada día visitábamos en Olmos a papá y llevábamos su almuerzo.</p>
+        <p>Sabíamos lo que para él representaba la cárcel. Por eso lo apoyábamos con nuestra fuerza y con nuestro amor. Sus ojos claros ya no nos pertenecían. Será que nadie muere un día. Uno muere un poco todos los días. En marzo salió en libertad bajo fianza. En abril, un grupo del ejército lo levantó y lo dejó tendido en una ruta solitaria pensando que no tenía vida. Un camionero solidario que observó lo que pasaba regresó a buscarlo y lo trajo a casa para recibir los primeros auxilios. No quiso comprometer más aún a la familia. Ya todo el medio familiar estaba amenazado.</p>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <p>Su responsabilidad y vocación de servicio por sus ideales hacía que lo amásemos y admirásemos. Más allá de los egoísmos infantiles de querer retenerlo para nosotras, siempre nos hizo comprender que alguien tenía que jugarse por los nobles ideales de la patria.</p>
+        <p>En mayo nos encontramos en casa de la abuela. Su madre había preparado la casa con todo amor, como si el tenerlo en casa fuera una fiesta. Al atardecer y antes de despedirnos, tomó mi mano, me dijo: <em>—Graciela, voy a partir, no hay regreso, debes estar preparada, porque nunca te mentí—</em>. Sabía que no le gustaba que llorara. Cuando tocó mis lágrimas con sus dedos le dije que no lloraba, que solamente me dolían los ojos. Y nos reímos juntos. Me abrazó con la ternura y el amor que sólo puede tener un padre y depositó en mi mano el gemelo de su camisa.</p>
+        <p>Acarició mi rostro y mi pelo, pidió que lo mantuviera largo y besó mi frente. Lo vi los primeros días de junio. Enfermé y llegó una madrugada a verme por unos segundos. Después vería a un padre dormido con su mejor sonrisa. Sus verdugos no pudieron apagar con su martirio su serena belleza varonil.</p>
+        <p>Si no conoce la historia del peronismo, sepa qué aconteció el 9 de junio de 1956 cuando un grupo de jóvenes salió a defender la voluntad del pueblo. Conozca sus héroes, sus mártires, y sepa que esta querida ciudad de La Plata, Berisso y Ensenada fue escenario de la más valiente resistencia peronista. Regaron con su sangre las calles platenses por los más nobles ideales.</p>
+        <p>Cuando usted pisa la ciudad de La Plata, capital de la Provincia de Buenos Aires, sepa que noviembre la perfuma de tilos porque ha sido cuna de héroes, semillero de cultura, de hombres y mujeres capaces de jugar su último aliento para defender sus ideales.</p>
+        <div class="monumento">
+          <div class="dot"></div>
+          <span>Dieron su vida por una Patria Libre, Justa y Soberana.<br>No fue en vano.</span>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:5rem;border-left:1px solid var(--rojo);padding-left:2.5rem;max-width:720px;">
+      <blockquote style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.3rem,2vw,1.75rem);line-height:1.6;color:var(--negro);margin:0;">"Así es la vida y la muerte. Están unidas. Son una cadena como las dos partes de este gemelo. Nada nos separa, todo nos une."</blockquote>
+      <cite style="display:block;margin-top:1rem;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gris);font-style:normal;">Rolando A. Zanetta — Mayo de 1956</cite>
+    </div>
+  </div>
+</section>
+
+<!-- MISIÓN -->
+<section class="section" id="mision">
+  <div class="wrapper">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Misión</div>
+      <h2 class="section-h2">Lo que hacemos<br><em>y por qué</em></h2>
+    </div>
+    <div class="pilares reveal">
+      <div class="pilar">
+        <div class="pilar-n">01</div>
+        <h3>Memoria Histórica</h3>
+        <p>Preservamos documentos, testimonios y archivos sobre la Resistencia Peronista platense para que las generaciones futuras puedan conocer y valorar esta historia.</p>
+      </div>
+      <div class="pilar">
+        <div class="pilar-n">02</div>
+        <h3>Educación y Difusión</h3>
+        <p>Organizamos charlas, ciclos de historia y actividades educativas abiertas a la comunidad, transmitiendo el legado de quienes resistieron a la dictadura.</p>
+      </div>
+      <div class="pilar">
+        <div class="pilar-n">03</div>
+        <h3>Patrimonio Cultural</h3>
+        <p>Cuidamos y ponemos en valor la sede declarada Monumento Histórico Provincial, abriendo sus puertas a investigadores y a toda la comunidad.</p>
+      </div>
+      <div class="pilar">
+        <div class="pilar-n">04</div>
+        <h3>Comunidad</h3>
+        <p>Construimos redes entre personas comprometidas con la memoria colectiva, promoviendo la participación activa y el diálogo intergeneracional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVIDADES -->
+<section class="section" id="actividades">
+  <div class="wrapper">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Actividades</div>
+      <h2 class="section-h2">Nuestras<br><em>actividades</em></h2>
+    </div>
+    <div class="eventos reveal">
+      <div class="evento">
+        <div class="ev-fecha">
+          <span class="ev-dia">03</span>
+          <span class="ev-mes">Feb 2006</span>
+        </div>
+        <div class="ev-info">
+          <h3>Asistencia Alimentaria Comunitaria</h3>
+          <p>Distribución de alimentos no perecederos a 250 familias de la ciudad de La Plata, actividad sostenida ininterrumpidamente desde el año 2006. A lo largo de estos años, la fundación ha consolidado una red de asistencia alimentaria que acompaña a las familias más vulnerables de la región.</p>
+        </div>
+        <span class="ev-lugar">La Plata</span>
+      </div>
+      <div class="evento">
+        <div class="ev-fecha">
+          <span class="ev-dia">14</span>
+          <span class="ev-mes">Abr 2012</span>
+        </div>
+        <div class="ev-info">
+          <h3>Talleres y Becas para Jóvenes</h3>
+          <p>Talleres para jóvenes en las áreas de musicoterapia, plástica, música y deportes —incluyendo tenis—, con otorgamiento de becas a todos los participantes. Estas actividades buscan promover el desarrollo integral de los jóvenes a través del arte, la cultura y el deporte.</p>
+        </div>
+        <span class="ev-lugar">La Plata</span>
+      </div>
+      <div class="evento">
+        <div class="ev-fecha">
+          <span class="ev-dia">07</span>
+          <span class="ev-mes">Sep 2016</span>
+        </div>
+        <div class="ev-info">
+          <h3>Programa de Empleo San Fernando</h3>
+          <p>Programa de empleo para 130 personas en la zona de San Fernando, en oficios de limpieza de cauces de arroyos, talleres de costura y confección de delantales. Actualmente se desarrollan tareas de producción de ropa interior femenina de alta calidad, brindando trabajo genuino y digno a mujeres de la comunidad.</p>
+        </div>
+        <span class="ev-lugar">San Fernando</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+  <div class="wrapper">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Contacto</div>
+      <h2 class="section-h2">Ponerse<br><em>en contacto</em></h2>
+    </div>
+    <div class="contacto-grid">
+      <div class="reveal">
+        <div class="contacto-info">
+          <h3>Si querés participar, consultar o conectarte con nuestra comunidad, estamos disponibles.</h3>
+          <div class="c-datos">
+            <div class="c-dato">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Calle 68 Nº 1.541, La Plata, Buenos Aires
+            </div>
+            <div class="c-dato">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="1.5"/><path d="M22 7l-10 7L2 7"/></svg>
+              contacto@fundacionzanetta.org.ar
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="form reveal" style="transition-delay:.1s" onsubmit="return false">
+        <div class="form-row">
+          <div class="campo">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre">
+          </div>
+          <div class="campo">
+            <label>Apellido</label>
+            <input type="text" placeholder="Tu apellido">
+          </div>
+        </div>
+        <div class="campo">
+          <label>Correo electrónico</label>
+          <input type="email" placeholder="tu@email.com">
+        </div>
+        <div class="campo">
+          <label>Motivo</label>
+          <select>
+            <option value="" disabled selected>Seleccioná una opción</option>
+            <option>Participar en actividades</option>
+            <option>Consulta sobre la fundación</option>
+            <option>Visita al patrimonio</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label>Mensaje</label>
+          <textarea rows="4" placeholder="Escribí tu mensaje aquí..."></textarea>
+        </div>
+        <button class="form-submit" type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="section" id="galeria">
+  <div class="wrapper">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Galería</div>
+      <h2 class="section-h2">Nuestra<br><em>historia en imágenes</em></h2>
+    </div>
+    <div class="galeria-grid reveal">
+      <div class="g-item" onclick="abrirFoto('fotos/foto1.jpg')"><img src="fotos/foto1.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto2.jpg')"><img src="fotos/foto2.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto3.jpg')"><img src="fotos/foto3.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto4.jpg')"><img src="fotos/foto4.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto5.jpg')"><img src="fotos/foto5.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto6.jpg')"><img src="fotos/foto6.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto7.jpg')"><img src="fotos/foto7.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto8.jpg')"><img src="fotos/foto8.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto9.jpg')"><img src="fotos/foto9.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto10.jpg')"><img src="fotos/foto10.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto11.jpg')"><img src="fotos/foto11.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto12.jpg')"><img src="fotos/foto12.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto13.jpg')"><img src="fotos/foto13.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto14.jpg')"><img src="fotos/foto14.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto15.jpg')"><img src="fotos/foto15.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto16.jpg')"><img src="fotos/foto16.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto17.jpg')"><img src="fotos/foto17.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto18.jpg')"><img src="fotos/foto18.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto19.jpg')"><img src="fotos/foto19.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto20.jpg')"><img src="fotos/foto20.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto21.jpg')"><img src="fotos/foto21.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto22.jpg')"><img src="fotos/foto22.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto23.jpg')"><img src="fotos/foto23.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto24.jpg')"><img src="fotos/foto24.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto25.jpg')"><img src="fotos/foto25.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto26.jpg')"><img src="fotos/foto26.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto27.jpg')"><img src="fotos/foto27.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+      <div class="g-item" onclick="abrirFoto('fotos/foto28.jpg')"><img src="fotos/foto28.jpg" alt="Actividad de la fundación" loading="lazy"><div class="g-overlay"><span>Ver foto</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="cerrarFoto()">
+  <button class="lb-cerrar" onclick="cerrarFoto()">✕</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<style>
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+.g-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--gris-claro, #e8e6e1);
+}
+.g-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  filter: grayscale(20%);
+}
+.g-item:hover img { transform: scale(1.04); filter: grayscale(0%); }
+.g-overlay {
+  position: absolute; inset: 0;
+  background: rgba(17,17,16,0);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s;
+}
+.g-overlay span {
+  font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #fff; opacity: 0; transition: opacity 0.3s;
+}
+.g-item:hover .g-overlay { background: rgba(17,17,16,0.35); }
+.g-item:hover .g-overlay span { opacity: 1; }
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed; inset: 0; z-index: 999;
+  background: rgba(10,10,9,0.95);
+  align-items: center; justify-content: center;
+  cursor: zoom-out;
+}
+.lightbox.abierto { display: flex; }
+#lb-img {
+  max-width: 90vw; max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+}
+.lb-cerrar {
+  position: absolute; top: 2rem; right: 2rem;
+  background: none; border: 1px solid rgba(255,255,255,0.3);
+  color: #fff; font-size: 1rem; width: 40px; height: 40px;
+  cursor: pointer; transition: border-color 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.lb-cerrar:hover { border-color: var(--rojo); color: var(--rojo); }
+
+@media (max-width: 860px) {
+  .galeria-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+<footer>
+  <div class="footer-inner">
+    <span class="f-marca">Fundación Rolando A. Zanetta</span>
+    <span class="f-copy">© 2025 — La Plata, Buenos Aires, Argentina</span>
+    <span class="f-ley">Ley 13.650 · Mon. Histórico Prov.</span>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+function abrirFoto(src) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lightbox').classList.add('abierto');
+  document.body.style.overflow = 'hidden';
+}
+function cerrarFoto() {
+  document.getElementById('lightbox').classList.remove('abierto');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarFoto(); });
+</script>
+</body>
+</html>
