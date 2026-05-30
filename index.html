@@ -40,13 +40,14 @@ nav {
 }
 .nav-marca {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 500; font-size: 1.05rem; letter-spacing: 0.04em;
+  font-weight: 500; font-size: 0.88rem; letter-spacing: 0.04em;
   color: var(--negro); text-decoration: none;
+  display: flex; align-items: center; white-space: nowrap; flex-shrink: 0;
 }
-.nav-links { list-style: none; display: flex; gap: 2.5rem; }
+.nav-links { list-style: none; display: flex; gap: 1.6rem; flex-shrink: 0; }
 .nav-links a {
-  font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--gris); text-decoration: none; transition: color 0.2s;
+  font-size: 0.63rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gris); text-decoration: none; transition: color 0.2s; white-space: nowrap;
 }
 .nav-links a:hover { color: var(--negro); }
 
@@ -237,11 +238,11 @@ footer { padding: 2.5rem 5vw; border-top: 1px solid var(--linea); }
 
 /* LOGO */
 .nav-logo {
-  height: 42px; width: auto;
+  height: 34px; width: auto;
   vertical-align: middle;
-  margin-right: 0.6rem;
+  margin-right: 0.55rem;
   opacity: 0.9;
-  position: relative; top: -1px;
+  flex-shrink: 0;
 }
 .footer-logo {
   height: 36px; width: auto;
