@@ -235,6 +235,30 @@ footer { padding: 2.5rem 5vw; border-top: 1px solid var(--linea); }
 .f-copy { font-size: 0.7rem; color: var(--gris); }
 .f-ley { font-size: 0.67rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rojo); }
 
+/* LOGO */
+.nav-logo {
+  height: 26px; width: auto;
+  vertical-align: middle;
+  margin-right: 0.55rem;
+  opacity: 0.9;
+  position: relative; top: -1px;
+}
+.footer-logo {
+  height: 22px; width: auto;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  opacity: 0.75;
+  position: relative; top: -1px;
+}
+.hero-logo-watermark {
+  position: absolute;
+  bottom: 3.5rem; left: 5vw;
+  height: 110px; width: auto;
+  opacity: 0.055;
+  pointer-events: none;
+  user-select: none;
+}
+
 /* REVEAL */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.75s ease, transform 0.75s ease; }
 .reveal.on { opacity: 1; transform: none; }
@@ -305,7 +329,10 @@ footer { padding: 2.5rem 5vw; border-top: 1px solid var(--linea); }
 
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-marca">Fundación Rolando A. Zanetta</a>
+    <a href="#" class="nav-marca">
+      <img src="fotos/logo.png" alt="" class="nav-logo">
+      Fundación Rolando A. Zanetta
+    </a>
     <ul class="nav-links" id="nav-links">
       <li><a href="#historia" onclick="cerrarMenu()">Historia</a></li>
       <li><a href="#gemelos" onclick="cerrarMenu()">Legado</a></li>
@@ -322,7 +349,8 @@ footer { padding: 2.5rem 5vw; border-top: 1px solid var(--linea); }
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" style="position:relative;">
+  <img src="fotos/logo.png" alt="" class="hero-logo-watermark">
   <div class="hero-inner">
     <div class="reveal">
       <div class="hero-eyebrow">La Plata — Desde 1956</div>
@@ -776,7 +804,10 @@ footer { padding: 2.5rem 5vw; border-top: 1px solid var(--linea); }
 
 <footer>
   <div class="footer-inner">
-    <span class="f-marca">Fundación Rolando A. Zanetta</span>
+    <span class="f-marca">
+      <img src="fotos/logo.png" alt="" class="footer-logo">
+      Fundación Rolando A. Zanetta
+    </span>
     <span class="f-copy">© 2025 — La Plata, Buenos Aires, Argentina</span>
     <span class="f-ley">Ley 13.650 · Mon. Histórico Prov.</span>
   </div>
