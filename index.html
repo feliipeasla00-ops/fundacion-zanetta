@@ -310,9 +310,9 @@ footer { padding: 2.5rem 5vw; border-top: 1px solid var(--linea); }
       <li><a href="#historia" onclick="cerrarMenu()">Historia</a></li>
       <li><a href="#gemelos" onclick="cerrarMenu()">Legado</a></li>
       <li><a href="#mision" onclick="cerrarMenu()">Misión</a></li>
-      <li><a href="#testimonios" onclick="cerrarMenu()">Testimonios</a></li>
       <li><a href="#actividades" onclick="cerrarMenu()">Actividades</a></li>
       <li><a href="#galeria" onclick="cerrarMenu()">Galería</a></li>
+      <li><a href="#testimonios" onclick="cerrarMenu()">Testimonios</a></li>
       <li><a href="#contacto" onclick="cerrarMenu()">Contacto</a></li>
     </ul>
     <button class="nav-toggle" id="nav-toggle" aria-label="Menú" onclick="toggleMenu()">
@@ -454,112 +454,6 @@ footer { padding: 2.5rem 5vw; border-top: 1px solid var(--linea); }
   </div>
 </section>
 
-<!-- TESTIMONIOS -->
-<section class="section" id="testimonios">
-  <div class="wrapper">
-    <div class="section-header reveal">
-      <div class="section-eyebrow">Testimonios</div>
-      <h2 class="section-h2">Voces de<br><em>nuestra comunidad</em></h2>
-    </div>
-    <div class="testimonios-grid">
-
-      <div class="testimonio reveal">
-        <div class="test-foto-wrap">
-          <img src="fotos/testimonio.jpeg" alt="Graciela Zanetta" class="test-foto">
-        </div>
-        <blockquote class="test-cita">"Trabajar por los sin voz, los humildes, los necesitados, siendo red de contención entre ellos y la clase política gobernante, que tiene el poder de gestión. Alude al amor que busca con benevolencia el bien del otro."</blockquote>
-        <div class="test-autor">
-          <span class="test-nombre">Graciela Zanetta</span>
-          <span class="test-rol">Hija de Rolando A. Zanetta</span>
-        </div>
-      </div>
-
-      <div class="testimonio reveal" style="transition-delay:.1s">
-        <div class="test-foto-wrap">
-          <img src="fotos/testimonio2.jpg" alt="Nélida Beatriz Romero" class="test-foto">
-        </div>
-        <blockquote class="test-cita">"La fundación nos devolvió la dignidad cuando más lo necesitábamos. No solo con alimentos, sino con el ejemplo de que hay personas que todavía creen en el otro sin pedir nada a cambio."</blockquote>
-        <div class="test-autor">
-          <span class="test-nombre">Nélida Beatriz Romero</span>
-          <span class="test-rol">Vecina del barrio El Mondongo, La Plata</span>
-        </div>
-      </div>
-
-      <div class="testimonio reveal" style="transition-delay:.2s">
-        <div class="test-foto-wrap">
-          <img src="fotos/testimonio3.jpg" alt="Hugo Osvaldo Alderete" class="test-foto">
-        </div>
-        <blockquote class="test-cita">"Visitar esta casa es encontrarse con la historia viva de La Plata. Cada rincón guarda la memoria de hombres y mujeres que eligieron la convicción sobre la comodidad. Un patrimonio que nos pertenece a todos."</blockquote>
-        <div class="test-autor">
-          <span class="test-nombre">Hugo Osvaldo Alderete</span>
-          <span class="test-rol">Militante peronista — Unidad Básica «17 de Octubre», Berisso</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<style>
-.testimonios-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--linea);
-  border-left: 1px solid var(--linea);
-}
-.testimonio {
-  padding: 2.8rem 2.5rem;
-  border-right: 1px solid var(--linea);
-  border-bottom: 1px solid var(--linea);
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  transition: background 0.3s;
-}
-.testimonio:hover { background: rgba(155,28,28,0.025); }
-.test-foto-wrap {
-  width: 72px;
-  height: 72px;
-  overflow: hidden;
-  border: 1px solid var(--linea);
-  flex-shrink: 0;
-}
-.test-foto-vacio { background: rgba(17,17,16,0.05); }
-.test-foto { width: 100%; height: 100%; object-fit: cover; display: block; }
-.test-cita {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1.12rem;
-  line-height: 1.7;
-  color: var(--negro);
-  flex: 1;
-}
-.test-autor {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--linea);
-}
-.test-nombre {
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--negro);
-  letter-spacing: 0.04em;
-}
-.test-rol {
-  font-size: 0.68rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--rojo);
-}
-@media (max-width: 860px) {
-  .testimonios-grid { grid-template-columns: 1fr; }
-}
-</style>
-
 <!-- ACTIVIDADES -->
 <section class="section" id="actividades">
   <div class="wrapper">
@@ -601,64 +495,6 @@ footer { padding: 2.5rem 5vw; border-top: 1px solid var(--linea); }
         </div>
         <span class="ev-lugar">San Fernando</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section class="section" id="contacto">
-  <div class="wrapper">
-    <div class="section-header reveal">
-      <div class="section-eyebrow">Contacto</div>
-      <h2 class="section-h2">Ponerse<br><em>en contacto</em></h2>
-    </div>
-    <div class="contacto-grid">
-      <div class="reveal">
-        <div class="contacto-info">
-          <h3>Si querés participar, consultar o conectarte con nuestra comunidad, estamos disponibles.</h3>
-          <div class="c-datos">
-            <div class="c-dato">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-              Calle 68 Nº 1.541, La Plata, Buenos Aires
-            </div>
-            <div class="c-dato">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="1.5"/><path d="M22 7l-10 7L2 7"/></svg>
-              contacto@fundacionzanetta.org.ar
-            </div>
-          </div>
-        </div>
-      </div>
-      <form class="form reveal" style="transition-delay:.1s" onsubmit="return false">
-        <div class="form-row">
-          <div class="campo">
-            <label>Nombre</label>
-            <input type="text" placeholder="Tu nombre">
-          </div>
-          <div class="campo">
-            <label>Apellido</label>
-            <input type="text" placeholder="Tu apellido">
-          </div>
-        </div>
-        <div class="campo">
-          <label>Correo electrónico</label>
-          <input type="email" placeholder="tu@email.com">
-        </div>
-        <div class="campo">
-          <label>Motivo</label>
-          <select>
-            <option value="" disabled selected>Seleccioná una opción</option>
-            <option>Participar en actividades</option>
-            <option>Consulta sobre la fundación</option>
-            <option>Visita al patrimonio</option>
-            <option>Otro</option>
-          </select>
-        </div>
-        <div class="campo">
-          <label>Mensaje</label>
-          <textarea rows="4" placeholder="Escribí tu mensaje aquí..."></textarea>
-        </div>
-        <button class="form-submit" type="submit">Enviar mensaje</button>
-      </form>
     </div>
   </div>
 </section>
@@ -773,6 +609,170 @@ footer { padding: 2.5rem 5vw; border-top: 1px solid var(--linea); }
   .galeria-grid { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
+
+<!-- TESTIMONIOS -->
+<section class="section" id="testimonios">
+  <div class="wrapper">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Testimonios</div>
+      <h2 class="section-h2">Voces de<br><em>nuestra comunidad</em></h2>
+    </div>
+    <div class="testimonios-grid">
+
+      <div class="testimonio reveal">
+        <div class="test-foto-wrap">
+          <img src="fotos/testimonio.jpeg" alt="Graciela Zanetta" class="test-foto">
+        </div>
+        <blockquote class="test-cita">"Trabajar por los sin voz, los humildes, los necesitados, siendo red de contención entre ellos y la clase política gobernante, que tiene el poder de gestión. Alude al amor que busca con benevolencia el bien del otro."</blockquote>
+        <div class="test-autor">
+          <span class="test-nombre">Graciela Zanetta</span>
+          <span class="test-rol">Hija de Rolando A. Zanetta</span>
+        </div>
+      </div>
+
+      <div class="testimonio reveal" style="transition-delay:.1s">
+        <div class="test-foto-wrap">
+          <img src="fotos/testimonio2.jpg" alt="Nélida Beatriz Romero" class="test-foto">
+        </div>
+        <blockquote class="test-cita">"La fundación nos devolvió la dignidad cuando más lo necesitábamos. No solo con alimentos, sino con el ejemplo de que hay personas que todavía creen en el otro sin pedir nada a cambio."</blockquote>
+        <div class="test-autor">
+          <span class="test-nombre">Nélida Beatriz Romero</span>
+          <span class="test-rol">Vecina del barrio El Mondongo, La Plata</span>
+        </div>
+      </div>
+
+      <div class="testimonio reveal" style="transition-delay:.2s">
+        <div class="test-foto-wrap">
+          <img src="fotos/testimonio3.jpg" alt="Hugo Osvaldo Alderete" class="test-foto">
+        </div>
+        <blockquote class="test-cita">"Visitar esta casa es encontrarse con la historia viva de La Plata. Cada rincón guarda la memoria de hombres y mujeres que eligieron la convicción sobre la comodidad. Un patrimonio que nos pertenece a todos."</blockquote>
+        <div class="test-autor">
+          <span class="test-nombre">Hugo Osvaldo Alderete</span>
+          <span class="test-rol">Militante peronista — Unidad Básica «17 de Octubre», Berisso</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--linea);
+  border-left: 1px solid var(--linea);
+}
+.testimonio {
+  padding: 2.8rem 2.5rem;
+  border-right: 1px solid var(--linea);
+  border-bottom: 1px solid var(--linea);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  transition: background 0.3s;
+}
+.testimonio:hover { background: rgba(155,28,28,0.025); }
+.test-foto-wrap {
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  border: 1px solid var(--linea);
+  flex-shrink: 0;
+}
+.test-foto-vacio { background: rgba(17,17,16,0.05); }
+.test-foto { width: 100%; height: 100%; object-fit: cover; display: block; }
+.test-cita {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: var(--negro);
+  flex: 1;
+}
+.test-autor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--linea);
+}
+.test-nombre {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--negro);
+  letter-spacing: 0.04em;
+}
+.test-rol {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rojo);
+}
+@media (max-width: 860px) {
+  .testimonios-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+  <div class="wrapper">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Contacto</div>
+      <h2 class="section-h2">Ponerse<br><em>en contacto</em></h2>
+    </div>
+    <div class="contacto-grid">
+      <div class="reveal">
+        <div class="contacto-info">
+          <h3>Si querés participar, consultar o conectarte con nuestra comunidad, estamos disponibles.</h3>
+          <div class="c-datos">
+            <div class="c-dato">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Calle 68 Nº 1.541, La Plata, Buenos Aires
+            </div>
+            <div class="c-dato">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="1.5"/><path d="M22 7l-10 7L2 7"/></svg>
+              contacto@fundacionzanetta.org.ar
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="form reveal" style="transition-delay:.1s" onsubmit="return false">
+        <div class="form-row">
+          <div class="campo">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre">
+          </div>
+          <div class="campo">
+            <label>Apellido</label>
+            <input type="text" placeholder="Tu apellido">
+          </div>
+        </div>
+        <div class="campo">
+          <label>Correo electrónico</label>
+          <input type="email" placeholder="tu@email.com">
+        </div>
+        <div class="campo">
+          <label>Motivo</label>
+          <select>
+            <option value="" disabled selected>Seleccioná una opción</option>
+            <option>Participar en actividades</option>
+            <option>Consulta sobre la fundación</option>
+            <option>Visita al patrimonio</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label>Mensaje</label>
+          <textarea rows="4" placeholder="Escribí tu mensaje aquí..."></textarea>
+        </div>
+        <button class="form-submit" type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="footer-inner">
